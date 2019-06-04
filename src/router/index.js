@@ -23,18 +23,18 @@ import Layout from '../views/layout/Layout'
 **/
 export const constantRouterMap = [
   { path: '/login', component: () => import('@/views/login/index'), hidden: true },
-  { path: '/404', component: () => import('@/views/404'), hidden: true },
+  // { path: '/404', component: () => import('@/views/404'), hidden: true },
 
   {
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/buylist/index',
     name: '首页',
-    hidden: true,
-    children: [{
-      path: 'dashboard',
-      component: () => import('@/views/dashboard/index')
-    }]
+    // hidden: true,
+    // children: [{
+    //   path: 'dashboard',
+    //   component: () => import('@/views/dashboard/index')
+    // }]
   },
 
   {
@@ -43,20 +43,20 @@ export const constantRouterMap = [
     redirect: '/example/table',
     name: 'Example',
     meta: { title: '码上有书', icon: 'example' },
-    children: [
-      {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
-      },
-      {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
-      }
-    ]
+    // children: [
+    //   {
+    //     path: 'table',
+    //     name: 'Table',
+    //     component: () => import('@/views/table/index'),
+    //     meta: { title: 'Table', icon: 'table' }
+    //   },
+    //   {
+    //     path: 'tree',
+    //     name: 'Tree',
+    //     component: () => import('@/views/tree/index'),
+    //     meta: { title: 'Tree', icon: 'tree' }
+    //   }
+    // ]
   },
 
   {
